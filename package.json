@@ -1,8 +1,9 @@
 {
-  "name": "-y",
+  "name": "spotify-clone",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://your-username.github.io/spotify-clone",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
