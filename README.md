@@ -23,10 +23,10 @@ A sleek and functional music player web application built with HTML, CSS, and Ja
   <img width="1920" height="918" alt="Desktop" src="https://github.com/user-attachments/assets/1708c71a-fb96-4e68-a423-e5fd4dda366b" />
 
 - Tab View
-  <img width="662" height="872" alt="tab" src="https://github.com/user-attachments/assets/843aabb4-06a3-4c1f-ab8e-9e09b1f8fe8e" />
+- <img width="662" height="872" alt="tab" src="https://github.com/user-attachments/assets/843aabb4-06a3-4c1f-ab8e-9e09b1f8fe8e" />
 
 - Mobile View
-  <img width="398" height="861" alt="phone" src="https://github.com/user-attachments/assets/315cc992-3d42-4b90-9593-7aebacf1384e" />
+- <img width="398" height="861" alt="phone" src="https://github.com/user-attachments/assets/315cc992-3d42-4b90-9593-7aebacf1384e" />
 
 
 ## 🛠️ Technologies Used
