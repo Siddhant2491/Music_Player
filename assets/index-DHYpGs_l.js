@@ -11,13 +11,13 @@
                             <img class="pp" src="./assets/images/play.svg" alt="">
                         </li>`}Array.from(document.querySelector(".lib").getElementsByTagName("li")).forEach(t=>{t.addEventListener("click",()=>{const o=parseInt(t.getAttribute("data-index"));i=o,d(l[o])})})}function u(e){if(typeof e!="number"||isNaN(e))return"0:00";const r=Math.round(e),t=Math.floor(r/60),o=r%60;return`${t}:${o.toString().padStart(2,"0")}`}function y(){n.onended=()=>{f&&i<l.length-1?(i++,d(l[i])):play.src="./assets/images/play.svg"}}const d=(e,r=!1)=>{e&&(n.src=e.path,n.loop=!1,y(),r||(n.play(),n.paused||(play.src="./assets/images/pause.svg")),document.querySelector(".disName").innerHTML=e.title,document.querySelector(".time").innerHTML="00:00 / "+u(e.duration))};async function v(){c.length===0&&await m();const e=new Map;c.forEach(t=>{const o=t.path.split("/"),s=o[o.length-2];e.has(s)||e.set(s,{folder:s,songs:[]}),e.get(s).songs.push(t)});const r=document.querySelector(".cards");r.innerHTML="";for(const[t,o]of e)try{const s=await fetch(`./songs/${t}/info.json`);let a={title:t,discription:`${t} Collection`};s.ok?a=await s.json():console.warn(`Could not fetch info.json for folder: ${t}`),r.innerHTML+=`
                 <div data-folder="${t}" class="card">
-                    <img src="./songs/${t}/cover.jpg" alt="COVER" onerror="this.src='/assets/images/default-cover.jpg'">
+                    <img src="./songs/${t}/cover.jpg" alt="COVER" onerror="this.src='./assets/images/default-cover.jpg'">
                     <h3>${a.title}</h3>
                     <p>${a.discription}</p>
                     <span class="songCount">${o.songs.length} songs</span>
                 </div>`}catch(s){console.error(`Error loading metadata for folder ${t}:`,s),r.innerHTML+=`
                 <div data-folder="${t}" class="card">
-                    <img src="./songs/${t}/cover.jpg" alt="COVER" onerror="this.src='/assets/images/default-cover.jpg'">
+                    <img src="./songs/${t}/cover.jpg" alt="COVER" onerror="this.src='./assets/images/default-cover.jpg'">
                     <h3>${t}</h3>
                     <p>${t} Collection</p>
                     <span class="songCount">${o.songs.length} songs</span>
